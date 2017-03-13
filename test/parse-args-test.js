@@ -1,6 +1,6 @@
 'use strict'
 
-const {assert: {isNumber, isNotNumber} } = require('chai');
+const {assert: {isNumber, isNotNumber, isArray} } = require('chai');
 
 const parseArgs = require('../lib/parse-args.js');
 
@@ -19,5 +19,8 @@ describe('parseArgs', ()=>{
     it('should return a number', ()=>{
       isNumber(parseArgs.arg3());
     })
+  })
+  it('should return the arguments as an array', ()=>{
+    isArray(parseArgs.arg4)
   })
 });
